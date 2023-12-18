@@ -41,15 +41,17 @@ public class CalCul {
     }
 
     public static double division(double num1, double num2) {
+
         return num1 / num2;
     }
 
     public static double division(long num1, long num2) {
-        return num1 / num2;
+        return num1*1.0 / num2;
     }
 
     public static double division(int num1, int num2) {
-        return num1 / num2;
+
+        return num1*1.0 / num2;
     }
 }
 
