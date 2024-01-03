@@ -1,5 +1,11 @@
 package Laboratornya4;
 
+import Laboratornya2.RunShoes;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
 //    //Задание 1.1.
 //    public static void main(String[] args) {
@@ -98,7 +104,6 @@ public class Main {
 //                    break;
 //                }
 //            }
-//
 //            if (sorted) {
 //                System.out.println("OK");
 //            }
@@ -106,13 +111,48 @@ public class Main {
 //                System.out.println("Please, try again");
 //            }
 //        }
-//
 //    }
 
 
+//    //    Задание 2.2.
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Array length: ");
+//        int length = scanner.nextInt();
+//        int[] array = new int[length];
+//        System.out.println("Numbers of array:");
+//        for (int i = 0; i < length; i++) {
+//            array[i] = scanner.nextInt();
+//        }
+//        System.out.println("Result: " + Arrays.toString(array));
+//    }
 
+//    //    Задание 2.3.
+//
+//    public static void main(String[] args) {
+//        int[] myArrya ={5, 6, 7, 2};
+//        System.out.println("Arrya 1:" + Arrays.toString(myArrya));
+//        String temp = String.valueOf(myArrya[0]);
+//        myArrya[0] = myArrya[3];
+//        myArrya[3] = Integer.parseInt(temp);
+//        System.out.println("Arrya 2:" + Arrays.toString(myArrya));
+//    }
 
+    //    Задание 2.4.
 
+    public static void main(String[] args) {
+        int[] myArray = {1, 2, 3, 1, 2, 4};
+        for (int i = 0; i < myArray.length; i++){
+            int count1 = 0;
+            for (int j = i + 1; j < myArray.length; j++){
+                if (myArray[i] == myArray[j]){
+                    count1++;
+                    if (count1 == 0)
+                    System.out.println(myArray[i]);
+                }
+            }
+        }
+    }
 
 
 }
