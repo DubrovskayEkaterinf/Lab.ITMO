@@ -87,5 +87,24 @@ public class Main {
 //}
 
     // Задание 5.5.
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(("Введите слова: "));
+        String stringOrig = scanner.nextLine();
+        System.out.println(invWords(stringOrig));
+    }
+    public static String invWords(String stringOrig) {
 
+        int n = stringOrig.length(); // Length of original string
+
+        String reverString = ""; // Empty string to store reversed chars
+
+        char ch; // Char to store current string character
+
+        for (int i = n - 1; i >= 0; i--) {
+            ch = stringOrig.charAt(i); // Return & store current char
+            reverString = reverString + ch; // Append char to end
+        }
+        return reverString;
+    }
 }
