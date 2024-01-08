@@ -53,12 +53,22 @@ public class Main {
 //    // Задание 5.3.
 
     public static void main(String[] args) {
-        String Str = new String("Вот папа забирает Сашу из садика. А Бяка - обижака у папы в рюкзаке сидит - залез" +
-                " незаметно, пока папа собирался на работу. Как только папа с Сашей заходят в магазин, Бяка - обижака вылезает" +
-                " из рюкзака, прыгает на Сашино плечо и шепчет ему на ушко :");
-            System.out.println(Str.replaceAll("Бяка",
-                    "[вырезано цензурой]"));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите текст: ");
+        String str1 = scanner.nextLine();
+        System.out.println("С цензурой: " + substitutionForCensor(str1));
+    }
+
+       public static String substitutionForCensor(String text){
+String st1 = "Бяка";
+String st2 = "[вырезано цензурой]";
+        text = text.replaceAll(st1
+                , st2);
+
+        return text;
+
         }
+
 
 //    // Задание 5.4.
 //    public static void main(String[] args) {
