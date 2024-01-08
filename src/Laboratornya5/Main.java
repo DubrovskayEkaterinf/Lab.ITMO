@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
+
 //    // Задание 5.1.
 //    public static void main(String[] args) {
 //        String s = "Lorem Ipsum - это текст-рыба, часто используемый в печати и " +
@@ -108,3 +111,4 @@ public class Main {
         return reverString;
     }
 }
+
