@@ -4,24 +4,29 @@ import java.util.Scanner;
 
 public class Main {
 
-
-
-
 //    // Задание 5.1.
 //    public static void main(String[] args) {
-//        String s = "Lorem Ipsum - это текст-рыба, часто используемый в печати и " +
-//                "вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на" +
-//                " латинице с начала XVI века. В то время некий безымянный печатник создал " +
-//                "большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для " +
-//                "распечатки образцов. Lorem Ipsum не только успешно пережил без заметных и" +
-//                "зменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в" +
-//                " новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х" +
-//                " годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker," +
-//                " в шаблонах которых используется Lorem Ipsum.";
-//        String longest = Arrays.stream(s.split(" "))
-//                .max(Comparator.comparingInt(String::length))
-//                .orElse(null);
-//        System.out.println(longest);
+//    Scanner scanner = new Scanner(System.in);
+//    String newText = scanner.nextLine();
+//    String  maxWordLength = getLongWord(newText);
+//    System.out.println("Максимальное длинное слово: " + "\n" + maxWordLength);
+//    }
+//    private static String getLongWord(String text) {
+//    String [] word1 = text.split(" ");
+//    int lengthWord = 0;
+//    String maxWordLength = " ";
+//    for (int i = 0; i < word1.length; i++) {
+//    if (word1[i].length() > lengthWord) {
+//        lengthWord = word1[i].length();
+//    }
+//}
+//    for (int i = 0; i < word1.length; i++){
+//    if (word1[i].length() == lengthWord) {
+//        maxWordLength += word1[i] + ", ";
+//    }
+//
+//        }
+//    return maxWordLength.substring(0, maxWordLength.length() - 1);
 //    }
 
     //    // Задание 5.2.
@@ -30,7 +35,9 @@ public class Main {
 //        String st = in.next();
 //        System.out.println(isPalindrome(st));
 //    }
-//    private static boolean isPalindrome(String st) {
+//    private static boolean isPalindrome(String st){
+//    st = st.replaceAll("[^A-Za-zА-Яа-я0-9]", "");
+//        st = st.toLowerCase();
 //        int j = st.length() - 1, i=0;
 //        boolean flag = true;
 //        while ((flag && i < j)) {
@@ -45,26 +52,13 @@ public class Main {
 
 //    // Задание 5.3.
 
-//    public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        String replayText = scanner.nextLine();
-//        System.out.println(replBeakWithCensor(replayText));
-//    }
-//private static String replBeakWithCensor(String text) {
-//    text = text.replaceAll("Бяка", "[вырезано цензурой]");
-//    text = text.replaceAll("БЯка", "[вырезано цензурой]");
-//    text = text.replaceAll("БЯКа", "[вырезано цензурой]");
-//    text = text.replaceAll("БЯКа", "[вырезано цензурой]");
-//    text = text.replaceAll("БЯКА", "[вырезано цензурой]");
-//    text = text.replaceAll("бяка", "[вырезано цензурой]");
-//    text = text.replaceAll("бЯка", "[вырезано цензурой]");
-//    text = text.replaceAll("бяКа", "[вырезано цензурой]");
-//    text = text.replaceAll("бякА", "[вырезано цензурой]");
-//    text = text.replaceAll("БякА", "[вырезано цензурой]");
-//    text = text.replaceAll("БяКА", "[вырезано цензурой]");
-//    text = text.replaceAll("бЯКА", "[вырезано цензурой]");
-//    return text;
-//}
+    public static void main(String[] args) {
+        String Str = new String("Вот папа забирает Сашу из садика. А Бяка - обижака у папы в рюкзаке сидит - залез" +
+                " незаметно, пока папа собирался на работу. Как только папа с Сашей заходят в магазин, Бяка - обижака вылезает" +
+                " из рюкзака, прыгает на Сашино плечо и шепчет ему на ушко :");
+            System.out.println(Str.replaceAll("Бяка",
+                    "[вырезано цензурой]"));
+        }
 
 //    // Задание 5.4.
 //    public static void main(String[] args) {
@@ -90,25 +84,27 @@ public class Main {
 //}
 
     // Задание 5.5.
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(("Введите слова: "));
-        String stringOrig = scanner.nextLine();
-        System.out.println(invWords(stringOrig));
-    }
-    public static String invWords(String stringOrig) {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println(("Введите слова: "));
+//        String stringOrig = scanner.nextLine();
+//        System.out.println(invWords(stringOrig));
+//    }
+//    public static String invWords(String stringOrig) {
+//
+//        int n = stringOrig.length();
+//
+//        String reverString = "";
+//
+//        char ch;
+//
+//        for (int i = n - 1; i >= 0; i--) {
+//            ch = stringOrig.charAt(i);
+//            reverString = reverString + ch;
+//        }
+//        return reverString;
+//    }
 
-        int n = stringOrig.length(); // Length of original string
 
-        String reverString = ""; // Empty string to store reversed chars
-
-        char ch; // Char to store current string character
-
-        for (int i = n - 1; i >= 0; i--) {
-            ch = stringOrig.charAt(i); // Return & store current char
-            reverString = reverString + ch; // Append char to end
-        }
-        return reverString;
-    }
 }
 
